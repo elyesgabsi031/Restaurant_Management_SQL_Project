@@ -1,5 +1,5 @@
 ﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
+-- Refer to Tables.sql for valid version of tables
 
 
 CREATE TABLE "orders" (
@@ -25,7 +25,7 @@ CREATE TABLE "customers" (
      )
 );
 
-CREATE TABLE "address" (
+CREATE TABLE "addresses" (
     "add_id" int   NOT NULL,
     "delivery_address1" varchar(200)   NOT NULL,
     "delivery_address2" varchar(200)   NULL,
@@ -36,7 +36,7 @@ CREATE TABLE "address" (
      )
 );
 
-CREATE TABLE "item" (
+CREATE TABLE "items" (
     "item_id" varchar(10)   NOT NULL,
     "sku" varchar(20)   NOT NULL,
     "item_name" varchar(100)   NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE "item" (
      )
 );
 
-CREATE TABLE "ingredient" (
+CREATE TABLE "ingredients" (
     "ing_id" varchar(10)   NOT NULL,
     "ing_name" varchar(200)   NOT NULL,
     "ing_weight" int   NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE "ingredient" (
      )
 );
 
-CREATE TABLE "recipe" (
+CREATE TABLE "recipes" (
     "row_id" int   NOT NULL,
     "recipe_id" varchar(20)   NOT NULL,
     "ing_id" varchar(10)   NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE "recipe" (
      )
 );
 
-CREATE TABLE "inventory" (
+CREATE TABLE "inventories" (
     "inv_id" int   NOT NULL,
     "item_id" varchar(10)   NOT NULL,
     "quantity" int   NOT NULL,
@@ -78,21 +78,22 @@ CREATE TABLE "inventory" (
      )
 );
 
-ALTER TABLE "customers" ADD CONSTRAINT "fk_customers_cust_id" FOREIGN KEY("cust_id")
+ALTER TABLE "customers" 
+ADD CONSTRAINT "fk_customers_cust_id" FOREIGN KEY("cust_id")
 REFERENCES "orders" ("cust_id");
 
-ALTER TABLE "address" ADD CONSTRAINT "fk_address_add_id" FOREIGN KEY("add_id")
+ALTER TABLE "addresses" ADD CONSTRAINT "fk_addresses_add_id" FOREIGN KEY("add_id")
 REFERENCES "orders" ("add_id");
 
-ALTER TABLE "item" ADD CONSTRAINT "fk_item_item_id" FOREIGN KEY("item_id")
+ALTER TABLE "items" ADD CONSTRAINT "fk_items_item_id" FOREIGN KEY("item_id")
 REFERENCES "orders" ("item_id");
 
-ALTER TABLE "ingredient" ADD CONSTRAINT "fk_ingredient_ing_id" FOREIGN KEY("ing_id")
+ALTER TABLE "ingredients" ADD CONSTRAINT "fk_ingredients_ing_id" FOREIGN KEY("ing_id")
 REFERENCES "recipe" ("ing_id");
 
-ALTER TABLE "recipe" ADD CONSTRAINT "fk_recipe_recipe_id" FOREIGN KEY("recipe_id")
-REFERENCES "item" ("sku");
+ALTER TABLE "recipes" ADD CONSTRAINT "fk_recipes_recipe_id" FOREIGN KEY("recipe_id")
+REFERENCES "items" ("sku");
 
-ALTER TABLE "inventory" ADD CONSTRAINT "fk_inventory_item_id" FOREIGN KEY("item_id")
-REFERENCES "recipe" ("ing_id");
+ALTER TABLE "inventories" ADD CONSTRAINT "fk_inventories_item_id" FOREIGN KEY("item_id")
+REFERENCES "recipes" ("ing_id");
 

@@ -1,6 +1,5 @@
--- The Tables imported from QuickDB contained bugs, and was not adequately written to my taste
+-- The Tables imported from QuickDB contained bugs, errors and was not adequately written to my taste
 -- This is the version I used 
-
 
 
 
@@ -22,7 +21,7 @@ CREATE TABLE customers (
     cust_lastname varchar(50)   NOT NULL
 );
 
-CREATE TABLE address (
+CREATE TABLE addresses (
     add_id int PRIMARY KEY,
     delivery_address1 varchar(200)   NOT NULL,
     delivery_address2 varchar(200)   NULL,
@@ -56,28 +55,33 @@ CREATE TABLE recipes (
     quantity int   NOT NULL
      );
 
-CREATE TABLE inventory (
+CREATE TABLE inventories (
     inv_id int PRIMARY KEY,
     item_id varchar(10)   NOT NULL,
     quantity int   NOT NULL
 );
 
-/*
-ALTER TABLE "customers" ADD CONSTRAINT "fk_customers_cust_id" FOREIGN KEY("cust_id")
-REFERENCES "orders" ("cust_id");
 
-ALTER TABLE "address" ADD CONSTRAINT "fk_address_add_id" FOREIGN KEY("add_id")
-REFERENCES "orders" ("add_id");
+ALTER TABLE orders 
+ADD CONSTRAINT "fk_customers_cust_id" FOREIGN KEY (cust_id)
+REFERENCES customers (cust_id);
 
-ALTER TABLE "item" ADD CONSTRAINT "fk_item_item_id" FOREIGN KEY("item_id")
-REFERENCES "orders" ("item_id");
+ALTER TABLE orders 
+ADD CONSTRAINT "fk_addresses_add_id" FOREIGN KEY (add_id)
+REFERENCES addresses (add_id);
 
-ALTER TABLE "ingredient" ADD CONSTRAINT "fk_ingredient_ing_id" FOREIGN KEY("ing_id")
-REFERENCES "recipe" ("ing_id");
+ALTER TABLE orders 
+ADD CONSTRAINT "fk_items_item_id" FOREIGN KEY (item_id)
+REFERENCES items (item_id);
 
-ALTER TABLE "recipe" ADD CONSTRAINT "fk_recipe_recipe_id" FOREIGN KEY("recipe_id")
-REFERENCES "item" ("sku");
+ALTER TABLE recipes 
+ADD CONSTRAINT "fk_ingredients_ing_id" FOREIGN KEY(ing_id)
+REFERENCES ingredients (ing_id);
 
-ALTER TABLE "inventory" ADD CONSTRAINT "fk_inventory_item_id" FOREIGN KEY("item_id")
-REFERENCES "recipe" ("ing_id");
-*/
+ALTER TABLE items
+ADD CONSTRAINT "sku_value_unique" UNIQUE (sku);
+
+
+ALTER TABLE recipes 
+ADD CONSTRAINT "fk_recipes_recipe_id" FOREIGN KEY(recipe_id)
+REFERENCES items (sku);

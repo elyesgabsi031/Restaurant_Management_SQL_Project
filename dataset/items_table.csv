@@ -1,0 +1,33 @@
+item_id,sku,item_name,item_cat,item_size,item_price
+it001,7-33CL,7 Up,Drink,33CL,3
+it002,7-1.5L,7 Up,Drink,1.5L,6
+it003,BANOFFEE-REGU,Banoffee Pie,Dessert,Regular,7
+it004,BREADSTICKS-REGU,Breadsticks,Side,Regular,5
+it005,CAESAR-REGU,Caesar Salad,Side,Regular,7
+it006,CHICKEN-REGU,Chicken Wings,Side,Regular,7
+it007,CHOCOLATE-REGU,Chocolate Brownie,Dessert,Regular,5
+it008,COCA-33CL,Coca Cola,Drink,33CL,3
+it009,COCA-1.5L,Coca Cola,Drink,1.5L,6
+it010,DIAVOLA-REGU,Diavola,Pizza,Regular,16
+it011,DIAVOLA-LARG,Diavola,Pizza,Large,19
+it012,FANTA-33CL,Fanta,Drink,33CL,3
+it013,FANTA-1.5L,Fanta,Drink,1.5L,6
+it014,FRUIT-REGU,Fruit Salad,Dessert,Regular,5
+it015,GARLIC-REGU,Garlic Bread,Side,Regular,6
+it016,HAWAIIAN-REGU,Hawaiian,Pizza,Regular,15
+it017,HAWAIIAN-LARG,Hawaiian,Pizza,Large,17
+it018,ICE-REGU,Ice cream,Dessert,Regular,6
+it019,MARGHERITA-REGU,Margherita,Pizza,Regular,13
+it020,MARGHERITA-LARG,Margherita,Pizza,Large,15
+it021,NAPOLITANA-REGU,Napolitana,Pizza,Regular,16
+it022,NAPOLITANA-LARG,Napolitana,Pizza,Large,18
+it023,PARMIGIANA-REGU,Parmigiana,Pizza,Regular,15
+it024,PARMIGIANA-LARG,Parmigiana,Pizza,Large,18
+it025,PEPPERONI-REGU,Pepperoni,Pizza,Regular,15
+it026,PEPPERONI-LARG,Pepperoni,Pizza,Large,17
+it027,QUATTRO-REGU,Quattro formaggi,Pizza,Regular,16
+it028,QUATTRO-LARG,Quattro formaggi,Pizza,Large,19
+it029,SEAFOOD-REGU,Seafood,Pizza,Regular,17
+it030,SEAFOOD-LARG,Seafood,Pizza,Large,20
+it031,SPARKLING-33CL,Sparkling Water,Drink,33CL,2
+it032,SPARKLING-1.5L,Sparkling Water,Drink,1.5L,4
