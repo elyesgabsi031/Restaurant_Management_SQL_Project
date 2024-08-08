@@ -1,12 +1,12 @@
--- To be updated Later
+
 # Introduction
 
-Exploring the Restaurant management world with a real world scenario! This project deals with a client named Ben who owns a pizza Shop. As Analyst, my task was to provide insights on sales, revenues, best performing products, etc.  
+Exploring the Restaurant Management World with a Real-World Scenario! 🌍 This project involves a client named Ben who owns a pizza shop 🍕. As an Analyst, my task was to provide insights on sales, revenues, and best-performing products through SQL, and to wrap up my work with an interactive dashboard 📊. 
 
 🔍 Check out sql queries here: [project_folder](/SQL_files/)
 
 # Background
-Motivated to advance my expertise in SQL and PowerBI, this project arose from my interest in broadening my analytical skills and delving into sectors such as the fast food industry and overall sales. The data, compiled from various sources like Ben's Pizza shop Menu and ChatGPT, covers a wide array of details including orders, recipes, customers, ingredients, and more.
+Motivated to advance my expertise in SQL and PowerBI, this project's purpose is to broaden my analytical skills and delve into new sectors such as the fast food industry and overall sales. Ben's Pizza is a fictional Pizza shop located in Los Angeles, but the data compiled from various sources is as close as it gets to reality. It covers a wide array of details including orders, recipes, customers, ingredients, and more. 
 <br>
 <br>
 ![Menu](menu.png "Ben's Pizza")
