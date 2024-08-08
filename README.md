@@ -7,11 +7,13 @@ Exploring the Restaurant management world with a real world scenario! This proje
 
 # Background
 Motivated to advance my expertise in SQL and PowerBI, this project arose from my interest in broadening my analytical skills and delving into sectors such as the fast food industry and overall sales. The data, compiled from various sources like Ben's Pizza shop Menu and ChatGPT, covers a wide array of details including orders, recipes, customers, ingredients, and more.
+<br>
+<br>
 ![Menu](menu.png "Ben's Pizza")
 
 
-### The questions we need to answer:
-This Project can be divided into 2 sub-projects: The first one deals Inventory, the second part with the business side. We will focus on the latter.
+# The questions we need to answer:
+This project can be divided into 2 sub-projects: The first one deals with inventory, the second part with the business side. We will focus on the latter.
 
 1. What are the total orders, total items sold, total sales, and the average order value ? 
 2. What are the sales per category, and the top performing items?
@@ -150,7 +152,7 @@ GROUP BY order_type
 
 # Conclusion:
 ### The results of our Analysis are shown below
-![Data Visualization](dash.png "Ben's Pizza orders Dashboard")
+![Dashboard](dash.png "Ben's Pizza orders Dashboard")
 
 
 
